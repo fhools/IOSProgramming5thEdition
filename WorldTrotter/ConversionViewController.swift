@@ -30,6 +30,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
         return nf
     }()
     
+    let validInputChars: NSCharacterSet = {
+        let cs = NSCharacterSet(charactersInString: "0123456789.")
+        return cs
+    }()
+    
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var celsiusLabel: UILabel!
     @IBAction func fahrenheitFieldEditingChanged(textField: UITextField) {
@@ -54,6 +60,13 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: UITextField Delegates
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        // Chapter 4 Bronze Challenge.
+        for c in string.utf16 {
+            if !validInputChars.characterIsMember(c) {
+                return false
+            }
+        }
+
         let existingTextHasDecimalSeparator = textField.text?.rangeOfString(".")
         let replacementTextHasDecimalSeparator = string.rangeOfString(".")
         
