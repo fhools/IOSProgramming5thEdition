@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E899AE51C3A41D3006E4620 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E899AE41C3A41D3006E4620 /* ConversionViewController.swift */; };
+		4E899AE71C3BA276006E4620 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E899AE61C3BA275006E4620 /* MapKit.framework */; };
 		4ED26A4A1C37993F00683A9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED26A491C37993F00683A9E /* AppDelegate.swift */; };
 		4ED26A4F1C37993F00683A9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED26A4D1C37993F00683A9E /* Main.storyboard */; };
 		4ED26A511C37993F00683A9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ED26A501C37993F00683A9E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		4E899AE41C3A41D3006E4620 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
+		4E899AE61C3BA275006E4620 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4ED26A461C37993F00683A9E /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4ED26A491C37993F00683A9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4ED26A4E1C37993F00683A9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E899AE71C3BA276006E4620 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		4ED26A3D1C37993F00683A9E = {
 			isa = PBXGroup;
 			children = (
+				4E899AE61C3BA275006E4620 /* MapKit.framework */,
 				4ED26A481C37993F00683A9E /* WorldTrotter */,
 				4ED26A471C37993F00683A9E /* Products */,
 			);
