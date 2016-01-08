@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WorldTrotter/MapViewController.swift"
-            timestampString = "473844334.274723"
+            timestampString = "473930866.911808"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>

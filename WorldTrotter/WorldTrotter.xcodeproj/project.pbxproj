@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E4EB7B71C3F8FDE007CE8CA /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7B61C3F8FDE007CE8CA /* WebViewController.swift */; };
 		4E899AE51C3A41D3006E4620 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E899AE41C3A41D3006E4620 /* ConversionViewController.swift */; };
 		4E899AE71C3BA276006E4620 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E899AE61C3BA275006E4620 /* MapKit.framework */; };
 		4E899AE91C3CE0A7006E4620 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E899AE81C3CE0A7006E4620 /* MapViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E4EB7B61C3F8FDE007CE8CA /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		4E899AE41C3A41D3006E4620 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversionViewController.swift; path = ../ConversionViewController.swift; sourceTree = "<group>"; };
 		4E899AE61C3BA275006E4620 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		4E899AE81C3CE0A7006E4620 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				4E899AE41C3A41D3006E4620 /* ConversionViewController.swift */,
 				4ED26A491C37993F00683A9E /* AppDelegate.swift */,
 				4ED26A4D1C37993F00683A9E /* Main.storyboard */,
+				4E4EB7B61C3F8FDE007CE8CA /* WebViewController.swift */,
 				4ED26A501C37993F00683A9E /* Assets.xcassets */,
 				4ED26A521C37993F00683A9E /* LaunchScreen.storyboard */,
 				4ED26A551C37993F00683A9E /* Info.plist */,
@@ -145,6 +148,7 @@
 				4E899AE51C3A41D3006E4620 /* ConversionViewController.swift in Sources */,
 				4E899AE91C3CE0A7006E4620 /* MapViewController.swift in Sources */,
 				4ED26A4A1C37993F00683A9E /* AppDelegate.swift in Sources */,
+				4E4EB7B71C3F8FDE007CE8CA /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
