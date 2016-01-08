@@ -11,6 +11,7 @@ import MapKit
 class MapViewController : UIViewController {
     
     var mapView: MKMapView!
+    let cl = CLLocationManager()
     override func loadView() {
         mapView = MKMapView()
         view = mapView
@@ -75,6 +76,8 @@ class MapViewController : UIViewController {
     
     @IBAction func findMe(stepper: UIButton) {
         print("User pressed find me")
+        
+        cl.requestAlwaysAuthorization()
         mapView.setUserTrackingMode(.Follow,
             animated: true)
         mapView.showsUserLocation = true
