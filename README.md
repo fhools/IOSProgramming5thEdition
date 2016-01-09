@@ -7,4 +7,6 @@ Status
 - [x] Chapter 3 - Basic Introduction To View Controllers/Views and Auto Layout
 - [x] Chapter 4 - UITextField and Introduction to Delegates
 - [x] Chapter 5 - View Controllers and Tab View Controller
+- [x] Chapter 6 - Using Map View and various features.
+
 
