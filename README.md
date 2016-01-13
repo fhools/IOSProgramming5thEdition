@@ -8,6 +8,6 @@ Status
 - [x] Chapter 4 - UITextField and Introduction to Delegates
 - [x] Chapter 5 - View Controllers and Tab View Controller
 - [x] Chapter 6 - Using Map View and various features.
-- [0] Chapter 7 - Locations
+- [ ] Chapter 7 - Locations
 - [x] Chapter 8 - Animation (TODO: Bronze and Silver Challenge)
-
+- [ ] Chapter 9 - Table Views

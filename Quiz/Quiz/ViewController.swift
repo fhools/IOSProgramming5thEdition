@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     
     func updateOffScreenLabel() {
         let screenWidth = view.frame.width
+        print("UpdateOffScreen Label = \(screenWidth)");
         nextQuestionLabelCenterXConstraint.constant = -screenWidth
     }
     
@@ -69,11 +70,11 @@ class ViewController: UIViewController {
         view.layoutIfNeeded()
         
         let screenWidth = view.frame.width
+        print("AnimateLabelTransition Label = \(screenWidth)");
         self.nextQuestionLabelCenterXConstraint.constant = 0
         self.currentQuestionLabelCenterXConstraint.constant += screenWidth
         
-        
-        UIView.animateWithDuration(0.5, delay: 0, options: [.CurveLinear], animations: {
+        UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [.CurveLinear], animations: {
             self.currentQuestionLabel.alpha = 0
             self.nextQuestionLabel.alpha = 1
             self.view.layoutIfNeeded()
