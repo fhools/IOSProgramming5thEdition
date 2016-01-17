@@ -31,6 +31,14 @@ class ItemsViewController : UITableViewController {
         return count + 1
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row < itemStore.allItems.count {
+            return 60
+        } else {
+            return 44
+        }
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Value1 is big textlabel and detailtextlabel side by side with icon on left as well
         // Note: resuseIdentifier is a unique string for each cell that look alike. 
@@ -59,6 +67,8 @@ class ItemsViewController : UITableViewController {
         if indexPath.row < itemStore.allItems.count {
             let item = itemStore.allItems[indexPath.row]
             cell.textLabel?.text = item.name
+            let font = cell.textLabel?.font
+            cell.textLabel?.font  = font!.fontWithSize(20)
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         } else {
             cell.textLabel?.text = "No more items"
