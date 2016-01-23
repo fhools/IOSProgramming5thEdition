@@ -12,6 +12,25 @@ class ItemsViewController : UITableViewController {
 
     var itemStore: ItemStore!
     
+    @IBAction func addNewItem(sender: AnyObject) {
+        let newItem = itemStore.createItem()
+        
+        if let index = itemStore.allItems.indexOf(newItem) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
+    @IBAction func toggleEditingMode(sender: AnyObject) {
+        if editing {
+            // Change text of button to Edit
+            sender.setTitle("Edit", forState: .Normal)
+            setEditing(false, animated: true)
+        } else {
+            sender.setTitle("Done", forState: .Normal)
+            setEditing(true, animated: true)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // We want the tableview to appear below the status bar area at the top of
@@ -23,7 +42,7 @@ class ItemsViewController : UITableViewController {
     }
     
     // MARK: UITableViewControllerDataSource
-    //Note: DataSource is the Model part of MVC
+    // Note: DataSource is the Model part of MVC
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let count = itemStore.allItems.count
@@ -31,13 +50,6 @@ class ItemsViewController : UITableViewController {
         return count + 1
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row < itemStore.allItems.count {
-            return 60
-        } else {
-            return 44
-        }
-    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Value1 is big textlabel and detailtextlabel side by side with icon on left as well
@@ -76,6 +88,27 @@ class ItemsViewController : UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == .Delete {
+            let item = itemStore.allItems[indexPath.row]
+            itemStore.removeItem(item)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
+    }
+    
+    // MARK: UITableViewControllerDelegate
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if indexPath.row < itemStore.allItems.count {
+            return 60
+        } else {
+            return 44
+        }
     }
     
     
