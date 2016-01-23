@@ -10,4 +10,5 @@ Status
 - [x] Chapter 6 - Using Map View and various features.
 - [ ] Chapter 7 - Locations
 - [x] Chapter 8 - Animation (TODO: Bronze and Silver Challenge)
-- [x] Chapter 9 - Table Views
+- [x] Chapter 9 - Displaying UITableView
+- [x] Chapter 10 - Editing UITableView

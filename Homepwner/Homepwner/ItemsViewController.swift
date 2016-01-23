@@ -92,9 +92,19 @@ class ItemsViewController : UITableViewController {
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            let item = itemStore.allItems[indexPath.row]
-            itemStore.removeItem(item)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+             let item = itemStore.allItems[indexPath.row]
+            let ac = UIAlertController(title: "Delete \(item.name)", message: "Are you sure you want to delete this item?", preferredStyle: .ActionSheet)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Destroy", style: .Destructive) { (action) -> Void in
+                
+                self.itemStore.removeItem(item)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+            }
+            
+            ac.addAction(cancelAction)
+            ac.addAction(deleteAction)
+            presentViewController(ac, animated: true, completion: nil)
+            
         }
     }
     
@@ -102,12 +112,23 @@ class ItemsViewController : UITableViewController {
         itemStore.moveItemAtIndex(sourceIndexPath.row, toIndex: destinationIndexPath.row)
     }
     
+    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return !(indexPath.row == itemStore.allItems.count)
+    }
     // MARK: UITableViewControllerDelegate
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.row < itemStore.allItems.count {
             return 60
         } else {
             return 44
+        }
+    }
+    
+    override func tableView(tableView: UITableView, targetIndexPathForMoveFromRowAtIndexPath sourceIndexPath: NSIndexPath, toProposedIndexPath proposedDestinationIndexPath: NSIndexPath) -> NSIndexPath {
+        if proposedDestinationIndexPath.row == itemStore.allItems.count {
+            return NSIndexPath(forRow: proposedDestinationIndexPath.row - 1,  inSection: 0)
+        } else {
+            return proposedDestinationIndexPath
         }
     }
     
