@@ -19,6 +19,7 @@ class Item: NSObject {
     init(name: String, serialNumber: String?, valueInDollars: Int) {
         self.name = name
         self.valueInDollars = valueInDollars
+        self.serialNumber = serialNumber
         self.dateCreated = NSDate()
         
         // NOTE: This is opposite of C++ where base constructor is always

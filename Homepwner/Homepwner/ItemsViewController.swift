@@ -37,8 +37,12 @@ class ItemsViewController : UITableViewController {
         // the screen
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
+        // Place tableview below battery status bar
         tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets 
+        tableView.scrollIndicatorInsets = insets
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 65
     }
     
     // MARK: UITableViewControllerDataSource
@@ -75,16 +79,22 @@ class ItemsViewController : UITableViewController {
         
         // The following uses the UITableView's queue of identifier it automatically manages
         // Note: If we don't set tableview's prototype cell's attribute to UITableView, it wouldn't have known!
-        let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("ItemCell", forIndexPath: indexPath) as! ItemCell
+        cell.updateLabels()
         if indexPath.row < itemStore.allItems.count {
             let item = itemStore.allItems[indexPath.row]
-            cell.textLabel?.text = item.name
-            let font = cell.textLabel?.font
-            cell.textLabel?.font  = font!.fontWithSize(20)
-            cell.detailTextLabel?.text = "$\(item.valueInDollars)"
+            cell.nameLabel?.text = item.name
+            cell.serialNumberLabel?.text = item.serialNumber
+            cell.valueLabel?.text = "$\(item.valueInDollars)"
+            if item.valueInDollars < 50 {
+                cell.valueLabel.textColor = UIColor.greenColor()
+            } else {
+                cell.valueLabel.textColor = UIColor.redColor()
+            }
         } else {
-            cell.textLabel?.text = "No more items"
-            cell.detailTextLabel?.text = ""
+            cell.nameLabel?.text = "No more items"
+            cell.serialNumberLabel?.text = ""
+            cell.valueLabel?.text = ""
         }
         
         return cell

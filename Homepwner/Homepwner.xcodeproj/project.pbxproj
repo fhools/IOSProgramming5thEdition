@@ -14,6 +14,7 @@
 		4E4EB7DB1C4ACFFA007CE8CA /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7DA1C4ACFFA007CE8CA /* Item.swift */; };
 		4E4EB7DD1C4B55A8007CE8CA /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7DC1C4B55A8007CE8CA /* ItemStore.swift */; };
 		4E4EB7DF1C4B9DB9007CE8CA /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7DE1C4B9DB9007CE8CA /* ItemsViewController.swift */; };
+		4E4EB7E31C537024007CE8CA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7E21C537024007CE8CA /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4E4EB7DA1C4ACFFA007CE8CA /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		4E4EB7DC1C4B55A8007CE8CA /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		4E4EB7DE1C4B9DB9007CE8CA /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		4E4EB7E21C537024007CE8CA /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				4E4EB7DE1C4B9DB9007CE8CA /* ItemsViewController.swift */,
 				4E4EB7DA1C4ACFFA007CE8CA /* Item.swift */,
+				4E4EB7E21C537024007CE8CA /* ItemCell.swift */,
 				4E4EB7DC1C4B55A8007CE8CA /* ItemStore.swift */,
 				4E4EB7C41C460447007CE8CA /* AppDelegate.swift */,
 				4E4EB7C81C460447007CE8CA /* Main.storyboard */,
@@ -145,6 +148,7 @@
 				4E4EB7DB1C4ACFFA007CE8CA /* Item.swift in Sources */,
 				4E4EB7DD1C4B55A8007CE8CA /* ItemStore.swift in Sources */,
 				4E4EB7C51C460447007CE8CA /* AppDelegate.swift in Sources */,
+				4E4EB7E31C537024007CE8CA /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,3 +12,4 @@ Status
 - [x] Chapter 8 - Animation (TODO: Bronze and Silver Challenge)
 - [x] Chapter 9 - Displaying UITableView
 - [x] Chapter 10 - Editing UITableView
+- [x] Chapter 11 - Subclassing UITableViewCell
