@@ -13,3 +13,4 @@ Status
 - [x] Chapter 9 - Displaying UITableView
 - [x] Chapter 10 - Editing UITableView
 - [x] Chapter 11 - Subclassing UITableViewCell
+- [x] Chapter 12 - Stack Views/Segues
