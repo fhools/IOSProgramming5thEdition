@@ -21,15 +21,22 @@ class ItemsViewController : UITableViewController {
         }
     }
     
-    @IBAction func toggleEditingMode(sender: AnyObject) {
-        if editing {
-            // Change text of button to Edit
-            sender.setTitle("Edit", forState: .Normal)
-            setEditing(false, animated: true)
-        } else {
-            sender.setTitle("Done", forState: .Normal)
-            setEditing(true, animated: true)
-        }
+//    @IBAction func toggleEditingMode(sender: AnyObject) {
+//        if editing {
+//            // Change text of button to Edit
+//            sender.setTitle("Edit", forState: .Normal)
+//            setEditing(false, animated: true)
+//        } else {
+//            sender.setTitle("Done", forState: .Normal)
+//            setEditing(true, animated: true)
+//        }
+//    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        // editButtonItems is a convenience method provided by UITableViewController
+        // which will crate a navigation bar button that will automatically 
+        // set the editing mode.
+        navigationItem.leftBarButtonItem = editButtonItem()
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +52,11 @@ class ItemsViewController : UITableViewController {
         tableView.estimatedRowHeight = 65
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        // Transition from Editing back to TableView should reload to get any new values
+        tableView.reloadData()
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "ShowItem" {

@@ -13,7 +13,7 @@ class Item: NSObject {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
-    let dateCreated: NSDate
+    var dateCreated: NSDate
     
     // NOTE: init is required because not all properties are initialized with default property when declared
     init(name: String, serialNumber: String?, valueInDollars: Int) {

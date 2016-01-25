@@ -20,7 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create the item storage for itemsviewcontroller.
         let itemStore = ItemStore()
         
-        let itemsController = window!.rootViewController as! ItemsViewController
+        let navController = window!.rootViewController as! UINavigationController
+        let itemsController = navController.topViewController as! ItemsViewController
         // QUESTION: Why didn't Xcode autocomplete itemStore? It should know from previous
         // downcast that itemsController is ItemsViewController
         itemsController.itemStore = itemStore
