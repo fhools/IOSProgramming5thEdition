@@ -14,6 +14,7 @@ class Item: NSObject {
     var valueInDollars: Int
     var serialNumber: String?
     var dateCreated: NSDate
+    let itemKey: String
     
     // NOTE: init is required because not all properties are initialized with default property when declared
     init(name: String, serialNumber: String?, valueInDollars: Int) {
@@ -21,6 +22,7 @@ class Item: NSObject {
         self.valueInDollars = valueInDollars
         self.serialNumber = serialNumber
         self.dateCreated = NSDate()
+        self.itemKey = NSUUID().UUIDString
         
         // NOTE: This is opposite of C++ where base constructor is always
         // initialized first

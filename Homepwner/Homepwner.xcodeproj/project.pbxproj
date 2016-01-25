@@ -17,6 +17,7 @@
 		4E4EB7E31C537024007CE8CA /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7E21C537024007CE8CA /* ItemCell.swift */; };
 		4E4EB7E51C54652B007CE8CA /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E4EB7E41C54652B007CE8CA /* DetailsViewController.swift */; };
 		4EDC41CB1C55A2F200576EDB /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC41CA1C55A2F200576EDB /* DateViewController.swift */; };
+		4EDC41CD1C55F6D000576EDB /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDC41CC1C55F6D000576EDB /* ImageStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4E4EB7E21C537024007CE8CA /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		4E4EB7E41C54652B007CE8CA /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		4EDC41CA1C55A2F200576EDB /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		4EDC41CC1C55F6D000576EDB /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				4E4EB7C41C460447007CE8CA /* AppDelegate.swift */,
 				4E4EB7C81C460447007CE8CA /* Main.storyboard */,
 				4E4EB7E41C54652B007CE8CA /* DetailsViewController.swift */,
+				4EDC41CC1C55F6D000576EDB /* ImageStore.swift */,
 				4EDC41CA1C55A2F200576EDB /* DateViewController.swift */,
 				4E4EB7CB1C460447007CE8CA /* Assets.xcassets */,
 				4E4EB7CD1C460447007CE8CA /* LaunchScreen.storyboard */,
@@ -153,6 +156,7 @@
 				4E4EB7DF1C4B9DB9007CE8CA /* ItemsViewController.swift in Sources */,
 				4E4EB7DB1C4ACFFA007CE8CA /* Item.swift in Sources */,
 				4EDC41CB1C55A2F200576EDB /* DateViewController.swift in Sources */,
+				4EDC41CD1C55F6D000576EDB /* ImageStore.swift in Sources */,
 				4E4EB7DD1C4B55A8007CE8CA /* ItemStore.swift in Sources */,
 				4E4EB7C51C460447007CE8CA /* AppDelegate.swift in Sources */,
 				4E4EB7E31C537024007CE8CA /* ItemCell.swift in Sources */,

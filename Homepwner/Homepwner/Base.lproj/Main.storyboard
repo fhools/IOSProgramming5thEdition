@@ -19,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-WJ-c9r">
-                                <rect key="frame" x="20" y="72" width="560" height="528"/>
+                                <rect key="frame" x="20" y="72" width="560" height="476"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-iz-uJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-iz-uJW">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-77-0bf">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-77-0bf">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-eI-9xU" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-eI-9xU" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -40,17 +40,17 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-7Q-J98">
-                                        <rect key="frame" x="0.0" y="30" width="560" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-7Q-J98">
+                                        <rect key="frame" x="0.0" y="21" width="560" height="21"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-Wf-xnb">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-Wf-xnb">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-ai-2Ui" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-ai-2Ui" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <connections>
@@ -59,17 +59,17 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cuD-sH-lsv">
-                                        <rect key="frame" x="0.0" y="60" width="560" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cuD-sH-lsv">
+                                        <rect key="frame" x="0.0" y="42" width="560" height="21"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXS-m0-ins">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXS-m0-ins">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-2t-I7T" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-2t-I7T" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 <connections>
@@ -78,33 +78,52 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-PW-qK0">
-                                        <rect key="frame" x="0.0" y="90" width="560" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-PW-qK0">
+                                        <rect key="frame" x="0.0" y="63" width="560" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-AJ-y3a">
-                                        <rect key="frame" x="0.0" y="111" width="560" height="417"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-AJ-y3a">
+                                        <rect key="frame" x="0.0" y="63" width="560" height="26"/>
                                         <state key="normal" title="Modify Date"/>
                                         <connections>
                                             <segue destination="wla-ba-EuD" kind="show" identifier="ModifyDate" id="Bbu-9s-P2S"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-Pe-xGs">
+                                        <rect key="frame" x="0.0" y="89" width="560" height="387"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="i5C-eI-9xU" firstAttribute="leading" secondItem="Bxc-ai-2Ui" secondAttribute="leading" id="4Do-01-Bxi"/>
                                     <constraint firstItem="Bxc-ai-2Ui" firstAttribute="leading" secondItem="Wmm-2t-I7T" secondAttribute="leading" id="UXM-ep-ird"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-up-A9e">
+                                <rect key="frame" x="20" y="556" width="560" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NU9-qY-YZB"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="4SD-sr-9Hn">
+                                        <connections>
+                                            <action selector="takePicture:" destination="hch-3f-sCR" id="BTY-IH-nxC"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LQS-up-A9e" secondAttribute="trailing" id="1xj-m7-AqO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OiY-WJ-c9r" secondAttribute="trailing" id="AVc-nD-B3A"/>
-                            <constraint firstItem="6oP-tz-em7" firstAttribute="top" secondItem="OiY-WJ-c9r" secondAttribute="bottom" id="HUe-MX-X6Z"/>
                             <constraint firstItem="OiY-WJ-c9r" firstAttribute="top" secondItem="gYP-v0-50U" secondAttribute="bottom" constant="8" id="LqT-5K-j4p"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="top" secondItem="OiY-WJ-c9r" secondAttribute="bottom" constant="8" id="dUy-he-NmO"/>
+                            <constraint firstItem="6oP-tz-em7" firstAttribute="top" secondItem="LQS-up-A9e" secondAttribute="bottom" id="dqF-g7-A6r"/>
                             <constraint firstItem="OiY-WJ-c9r" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="iLV-sP-SHf"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="lL4-jn-xoB"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nC6-ah-kqo" appends="YES" id="jjF-1h-kN4"/>
@@ -112,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="Bpp-PW-qK0" id="cWC-fN-eay"/>
+                        <outlet property="imageView" destination="Wds-Pe-xGs" id="P10-Jx-Fdk"/>
                         <outlet property="nameField" destination="i5C-eI-9xU" id="zxB-an-ZXB"/>
                         <outlet property="serialNumberField" destination="Bxc-ai-2Ui" id="byq-bN-leP"/>
                         <outlet property="valueField" destination="Wmm-2t-I7T" id="H6p-nI-MhG"/>
