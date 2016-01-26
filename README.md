@@ -15,3 +15,4 @@ Status
 - [x] Chapter 11 - Subclassing UITableViewCell
 - [x] Chapter 12 - Stack Views/Segues
 - [x] Chapter 13 - UINavigationController
+- [x] Chapter 14 - Camera

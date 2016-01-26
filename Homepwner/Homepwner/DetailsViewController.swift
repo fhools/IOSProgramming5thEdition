@@ -72,7 +72,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
             imagePicker.sourceType = .PhotoLibrary
         }
         imagePicker.delegate = self
+        imagePicker.allowsEditing = true
+        
+        let frame = imagePicker.view.frame
+        let crossHair = UILabel(frame: CGRect(x: frame.width/2, y: frame.height/2, width: 10, height: 10))
+        crossHair.text = "+"
+        imagePicker.cameraOverlayView = crossHair
         presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    @IBAction func removePicture(sender: UIBarButtonItem) {
+        imageStore.deletImageForKey(item.itemKey)
+        imageView.image = nil
     }
     
     // MARK: UIImagePickerControllerDelegate

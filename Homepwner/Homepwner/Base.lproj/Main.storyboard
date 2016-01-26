@@ -101,7 +101,7 @@
                                 </constraints>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-up-A9e">
-                                <rect key="frame" x="20" y="556" width="560" height="44"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="NU9-qY-YZB"/>
                                 </constraints>
@@ -111,19 +111,25 @@
                                             <action selector="takePicture:" destination="hch-3f-sCR" id="BTY-IH-nxC"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="trash" id="eC6-dI-Ptp">
+                                        <inset key="imageInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="removePicture:" destination="hch-3f-sCR" id="jSD-29-bgS"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="LQS-up-A9e" secondAttribute="trailing" id="1xj-m7-AqO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LQS-up-A9e" secondAttribute="trailing" constant="-20" id="7Mp-IQ-vrS"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OiY-WJ-c9r" secondAttribute="trailing" id="AVc-nD-B3A"/>
                             <constraint firstItem="OiY-WJ-c9r" firstAttribute="top" secondItem="gYP-v0-50U" secondAttribute="bottom" constant="8" id="LqT-5K-j4p"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" constant="-20" id="Y7i-qR-S2s"/>
                             <constraint firstItem="LQS-up-A9e" firstAttribute="top" secondItem="OiY-WJ-c9r" secondAttribute="bottom" constant="8" id="dUy-he-NmO"/>
                             <constraint firstItem="6oP-tz-em7" firstAttribute="top" secondItem="LQS-up-A9e" secondAttribute="bottom" id="dqF-g7-A6r"/>
                             <constraint firstItem="OiY-WJ-c9r" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="iLV-sP-SHf"/>
-                            <constraint firstItem="LQS-up-A9e" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="lL4-jn-xoB"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nC6-ah-kqo" appends="YES" id="jjF-1h-kN4"/>
