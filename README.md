@@ -17,3 +17,4 @@ Status
 - [x] Chapter 13 - UINavigationController
 - [x] Chapter 14 - Camera
 - [x] Chapter 15 - Saving, Loading and Application States
+- [x] Chapter 16 - Size Classes

@@ -18,87 +18,107 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-WJ-c9r">
-                                <rect key="frame" x="20" y="72" width="560" height="476"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-yu-C36">
+                                <rect key="frame" x="20" y="72" width="560" height="492"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-iz-uJW">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OiY-WJ-c9r">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="113"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-77-0bf">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNh-iz-uJW">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4t-77-0bf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-eI-9xU" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                        <rect key="frame" x="53" y="0.0" width="507" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hch-3f-sCR" id="lf1-db-4B6"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-7Q-J98">
+                                                <rect key="frame" x="0.0" y="21" width="560" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-Wf-xnb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-ai-2Ui" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                        <rect key="frame" x="53" y="0.0" width="507" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hch-3f-sCR" id="EMI-uX-2US"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <variation key="heightClass=compact" axis="vertical"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cuD-sH-lsv">
+                                                <rect key="frame" x="0.0" y="42" width="560" height="21"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXS-m0-ins">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="0.0" width="276" height="21"/>
+                                                        </variation>
+                                                    </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-2t-I7T" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
+                                                        <rect key="frame" x="53" y="0.0" width="507" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                        <variation key="heightClass=compact" misplaced="YES">
+                                                            <rect key="frame" x="0.0" y="29" width="276" height="30"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="hch-3f-sCR" id="vYE-bn-Ac5"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <variation key="heightClass=compact" axis="vertical" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="118" width="276" height="59"/>
+                                                </variation>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="242" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-PW-qK0">
+                                                <rect key="frame" x="0.0" y="63" width="560" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="heightClass=compact" misplaced="YES">
+                                                    <rect key="frame" x="0.0" y="177" width="276" height="85"/>
+                                                </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i5C-eI-9xU" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-AJ-y3a">
+                                                <rect key="frame" x="0.0" y="83" width="560" height="30"/>
+                                                <state key="normal" title="Modify Date"/>
                                                 <connections>
-                                                    <outlet property="delegate" destination="hch-3f-sCR" id="lf1-db-4B6"/>
+                                                    <segue destination="wla-ba-EuD" kind="show" identifier="ModifyDate" id="Bbu-9s-P2S"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="i5C-eI-9xU" firstAttribute="leading" secondItem="Bxc-ai-2Ui" secondAttribute="leading" id="4Do-01-Bxi"/>
+                                            <constraint firstItem="Bxc-ai-2Ui" firstAttribute="leading" secondItem="Wmm-2t-I7T" secondAttribute="leading" id="UXM-ep-ird"/>
+                                        </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AAP-7Q-J98">
-                                        <rect key="frame" x="0.0" y="21" width="560" height="21"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVN-Wf-xnb">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bxc-ai-2Ui" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="hch-3f-sCR" id="EMI-uX-2US"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cuD-sH-lsv">
-                                        <rect key="frame" x="0.0" y="42" width="560" height="21"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXS-m0-ins">
-                                                <rect key="frame" x="0.0" y="0.0" width="45" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wmm-2t-I7T" customClass="BorderedUITextField" customModule="Homepwner" customModuleProvider="target">
-                                                <rect key="frame" x="53" y="0.0" width="507" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                                <connections>
-                                                    <outlet property="delegate" destination="hch-3f-sCR" id="vYE-bn-Ac5"/>
-                                                </connections>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpp-PW-qK0">
-                                        <rect key="frame" x="0.0" y="63" width="560" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x1Y-AJ-y3a">
-                                        <rect key="frame" x="0.0" y="63" width="560" height="26"/>
-                                        <state key="normal" title="Modify Date"/>
-                                        <connections>
-                                            <segue destination="wla-ba-EuD" kind="show" identifier="ModifyDate" id="Bbu-9s-P2S"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wds-Pe-xGs">
-                                        <rect key="frame" x="0.0" y="89" width="560" height="387"/>
+                                        <rect key="frame" x="0.0" y="121" width="560" height="371"/>
                                     </imageView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="i5C-eI-9xU" firstAttribute="leading" secondItem="Bxc-ai-2Ui" secondAttribute="leading" id="4Do-01-Bxi"/>
-                                    <constraint firstItem="Bxc-ai-2Ui" firstAttribute="leading" secondItem="Wmm-2t-I7T" secondAttribute="leading" id="UXM-ep-ird"/>
-                                </constraints>
+                                <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>
                             </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LQS-up-A9e">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
@@ -123,14 +143,29 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="LQS-up-A9e" secondAttribute="trailing" constant="-20" id="7Mp-IQ-vrS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OiY-WJ-c9r" secondAttribute="trailing" id="AVc-nD-B3A"/>
-                            <constraint firstItem="OiY-WJ-c9r" firstAttribute="top" secondItem="gYP-v0-50U" secondAttribute="bottom" constant="8" id="LqT-5K-j4p"/>
-                            <constraint firstItem="LQS-up-A9e" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" constant="-20" id="Y7i-qR-S2s"/>
-                            <constraint firstItem="LQS-up-A9e" firstAttribute="top" secondItem="OiY-WJ-c9r" secondAttribute="bottom" constant="8" id="dUy-he-NmO"/>
-                            <constraint firstItem="6oP-tz-em7" firstAttribute="top" secondItem="LQS-up-A9e" secondAttribute="bottom" id="dqF-g7-A6r"/>
-                            <constraint firstItem="OiY-WJ-c9r" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="iLV-sP-SHf"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leading" id="84a-sP-IKa"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="bottom" secondItem="6oP-tz-em7" secondAttribute="top" id="F9O-dm-No7"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="top" secondItem="Vse-yu-C36" secondAttribute="bottom" id="JRX-D2-0OB"/>
+                            <constraint firstItem="6oP-tz-em7" firstAttribute="top" secondItem="LQS-up-A9e" secondAttribute="bottom" id="KSj-3R-OIa"/>
+                            <constraint firstItem="Vse-yu-C36" firstAttribute="top" secondItem="gYP-v0-50U" secondAttribute="bottom" id="Vkk-E7-T2t"/>
+                            <constraint firstAttribute="trailing" secondItem="LQS-up-A9e" secondAttribute="trailing" id="XQz-Hs-iPO"/>
+                            <constraint firstItem="LQS-up-A9e" firstAttribute="top" secondItem="Vse-yu-C36" secondAttribute="bottom" id="dJj-wY-seh"/>
+                            <constraint firstItem="Vse-yu-C36" firstAttribute="leading" secondItem="1Pb-Jw-eon" secondAttribute="leadingMargin" id="rTJ-EN-dl4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vse-yu-C36" secondAttribute="trailing" id="vtf-dQ-VyW"/>
                         </constraints>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="Vkk-E7-T2t"/>
+                                <include reference="rTJ-EN-dl4"/>
+                                <include reference="vtf-dQ-VyW"/>
+                                <include reference="84a-sP-IKa"/>
+                                <include reference="F9O-dm-No7"/>
+                                <include reference="JRX-D2-0OB"/>
+                                <include reference="XQz-Hs-iPO"/>
+                                <include reference="dJj-wY-seh"/>
+                                <include reference="KSj-3R-OIa"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="nC6-ah-kqo" appends="YES" id="jjF-1h-kN4"/>
                         </connections>
