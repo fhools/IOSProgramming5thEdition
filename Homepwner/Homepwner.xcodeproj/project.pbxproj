@@ -66,6 +66,7 @@
 		4E4EB7C31C460447007CE8CA /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				4EDC41CC1C55F6D000576EDB /* ImageStore.swift */,
 				4E4EB7DE1C4B9DB9007CE8CA /* ItemsViewController.swift */,
 				4E4EB7DA1C4ACFFA007CE8CA /* Item.swift */,
 				4E4EB7E21C537024007CE8CA /* ItemCell.swift */,
@@ -73,7 +74,6 @@
 				4E4EB7C41C460447007CE8CA /* AppDelegate.swift */,
 				4E4EB7C81C460447007CE8CA /* Main.storyboard */,
 				4E4EB7E41C54652B007CE8CA /* DetailsViewController.swift */,
-				4EDC41CC1C55F6D000576EDB /* ImageStore.swift */,
 				4EDC41CA1C55A2F200576EDB /* DateViewController.swift */,
 				4E4EB7CB1C460447007CE8CA /* Assets.xcassets */,
 				4E4EB7CD1C460447007CE8CA /* LaunchScreen.storyboard */,

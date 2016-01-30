@@ -9,7 +9,7 @@
 import UIKit
 
 // NOTE: Lets figure out what the app needs from NSObject
-class Item: NSObject {
+class Item: NSObject, NSCoding {
     var name: String
     var valueInDollars: Int
     var serialNumber: String?
@@ -27,6 +27,24 @@ class Item: NSObject {
         // NOTE: This is opposite of C++ where base constructor is always
         // initialized first
         super.init()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        name = aDecoder.decodeObjectForKey("name") as! String
+        dateCreated = aDecoder.decodeObjectForKey("dateCreated") as! NSDate
+        itemKey = aDecoder.decodeObjectForKey("itemKey") as! String
+        serialNumber = aDecoder.decodeObjectForKey("serialNumber") as! String?
+        valueInDollars = aDecoder.decodeIntegerForKey("valueInDollars") 
+        super.init()
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(dateCreated, forKey: "dateCreated")
+        aCoder.encodeObject(itemKey, forKey: "itemKey")
+        aCoder.encodeObject(serialNumber, forKey: "serialNumber")
+        aCoder.encodeInteger(valueInDollars, forKey: "valueInDollars")
+        
     }
     
     convenience init(random: Bool = false) {

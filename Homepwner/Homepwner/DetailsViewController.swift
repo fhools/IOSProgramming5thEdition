@@ -68,16 +68,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate,
         let imagePicker = UIImagePickerController()
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
             imagePicker.sourceType = .Camera
+            let frame = imagePicker.view.frame
+            let crossHair = UILabel(frame: CGRect(x: frame.width/2, y: frame.height/2, width: 10, height: 10))
+            crossHair.text = "+"
+            imagePicker.cameraOverlayView = crossHair
         } else {
             imagePicker.sourceType = .PhotoLibrary
         }
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
         
-        let frame = imagePicker.view.frame
-        let crossHair = UILabel(frame: CGRect(x: frame.width/2, y: frame.height/2, width: 10, height: 10))
-        crossHair.text = "+"
-        imagePicker.cameraOverlayView = crossHair
+      
         presentViewController(imagePicker, animated: true, completion: nil)
     }
     
