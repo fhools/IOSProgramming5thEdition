@@ -13,6 +13,19 @@ class DrawView: UIView {
     var finishedCircles = [Circle]()
     var currentCircles = [NSValue:Line]()
     
+    // MARK: Init
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "doubleTap:")
+        doubleTapRecognizer.numberOfTapsRequired = 2
+        // If we set .delaysTouchesBegan to false than the first tap
+        // of a double tap will cause touchesBegan methods to be called
+        doubleTapRecognizer.delaysTouchesBegan = true
+        addGestureRecognizer(doubleTapRecognizer)
+    }
+    
+    // MARK: Inspectable Properties
     @IBInspectable var finishedLineColor: UIColor = UIColor.blackColor() {
         didSet {
             setNeedsDisplay()
@@ -78,6 +91,14 @@ class DrawView: UIView {
         for c in finishedCircles {
             strokeCircle(c)
         }
+    }
+    
+    // MARK: Gesture actions
+    func doubleTap(gestureRecognizer: UIGestureRecognizer) {
+        print("Recognized a double tap")
+        currentLines.removeAll(keepCapacity: false)
+        finishedLines.removeAll(keepCapacity: false)
+        setNeedsDisplay()
     }
     
     // MARK: UIResponder
