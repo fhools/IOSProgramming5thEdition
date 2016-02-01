@@ -10,6 +10,8 @@ import UIKit
 class DrawView: UIView {
     var currentLines = [NSValue:Line]()
     var finishedLines = [Line]()
+    var finishedCircles = [Circle]()
+    var currentCircles = [NSValue:Line]()
     
     @IBInspectable var finishedLineColor: UIColor = UIColor.blackColor() {
         didSet {
@@ -39,6 +41,14 @@ class DrawView: UIView {
         path.stroke()
     }
     
+    func strokeCircle(circle: Circle) {
+        let path = UIBezierPath()
+        path.lineWidth = lineThicknesss
+        path.addArcWithCenter(circle.center, radius: circle.radius, startAngle: 0, endAngle: CGFloat(2.0)*CGFloat(M_PI), clockwise: false)
+        path.stroke()
+        
+    }
+    
     override func drawRect(rect: CGRect) {
         finishedLineColor.setStroke()
         for line in finishedLines {
@@ -64,6 +74,10 @@ class DrawView: UIView {
         for (_, line) in currentLines {
             strokeLine(line)
         }
+        
+        for c in finishedCircles {
+            strokeCircle(c)
+        }
     }
     
     // MARK: UIResponder
@@ -76,6 +90,7 @@ class DrawView: UIView {
             
             let key = NSValue(nonretainedObject: touch)
             currentLines[key] = newLine
+            currentCircles[key] = newLine
         }
         
         setNeedsDisplay()
@@ -92,13 +107,26 @@ class DrawView: UIView {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
        print(__FUNCTION__)
+        var points = [CGPoint]()
         for touch in touches {
             let key = NSValue(nonretainedObject: touch)
             if var line = currentLines[key] {
                 line.end = touch.locationInView(self)
-                               finishedLines.append(line)
+                finishedLines.append(line)
                 currentLines.removeValueForKey(key)
             }
+            if var point = currentCircles[key] {
+                point.end = touch.locationInView(self)
+                points.append(point.end)
+            }
+            
+        }
+        
+        if points.count > 1 {
+            let x = points[0].x + (points[1].x - points[0].x) / 2.0
+            let y = points[0].y + (points[1].y - points[0].y) / 2.0
+            let radius = hypot(points[1].x - points[0].x, points[1].y - points[0].y)
+            finishedCircles.append(Circle(radius: radius, center: CGPoint(x: x, y: y)))
         }
         setNeedsDisplay()
     }
@@ -106,6 +134,7 @@ class DrawView: UIView {
     override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
         print(__FUNCTION__)
         currentLines.removeAll()
+        currentCircles.removeAll()
         setNeedsDisplay()
         
     }
