@@ -12,4 +12,5 @@ import CoreGraphics
 struct Line {
     var begin = CGPoint.zero
     var end = CGPoint.zero
+    var thickness: CGFloat = 1.0
 }
