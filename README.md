@@ -18,3 +18,5 @@ Status
 - [x] Chapter 14 - Camera
 - [x] Chapter 15 - Saving, Loading and Application States
 - [x] Chapter 16 - Size Classes
+- [x] Chapter 17 - Touch Events
+- [x] Chapter 18 - UIGesture Recognizers
