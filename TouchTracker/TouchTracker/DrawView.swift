@@ -258,7 +258,9 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     // MARK: UIResponder
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print(__FUNCTION__)
-        
+        if selectedLineIndex  != nil {
+            moveRecognizer.enabled = false
+        }
         for touch in touches {
             let location = touch.locationInView(self)
             let newLine = Line(begin: location, end: location, thickness: 1.0)
@@ -285,6 +287,7 @@ class DrawView: UIView, UIGestureRecognizerDelegate {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         print(__FUNCTION__)
+        moveRecognizer.enabled = true
         var points = [CGPoint]()
         for touch in touches {
             let key = NSValue(nonretainedObject: touch)

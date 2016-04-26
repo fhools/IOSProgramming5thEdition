@@ -46,3 +46,14 @@ if let r1 = reading1, r2 = reading2, r3 = reading3 {
 } else {
     print("Couldn't get all readings")
 }
+
+import AVFoundation
+let url = NSURL(string: "http://cp.usa4.fastcast4u.com:2199/tunein/ddeepo05.pls")
+let player = AVPlayer(URL: url!)
+player
+// Without the following two lines. Xcode Playground will garbage collect all objects, including our
+// player object.
+import XCPlayground
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+

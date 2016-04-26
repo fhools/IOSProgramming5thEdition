@@ -20,3 +20,4 @@ Status
 - [x] Chapter 16 - Size Classes
 - [x] Chapter 17 - Touch Events
 - [x] Chapter 18 - UIGesture Recognizers
+- [x] Chapter 19 - WebServices NSURL
